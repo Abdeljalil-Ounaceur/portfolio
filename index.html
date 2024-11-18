@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdeljalil's Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #000000, #555555);
+            color: #ffffff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            position: relative;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #007acc;
+        }
+
+        nav a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #007acc;
+            transition: width 0.3s;
+            margin: 0 auto;
+        }
+
+        nav a:hover::after {
+            width: 50%;
+        }
+
+        /* Section Styles */
+        .section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #007acc;
+            border-bottom: 2px solid #007acc;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        details {
+          background: #f4f4f4;
+          margin: 20px 0;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        details summary {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        details p {
+          font-size: 1rem;
+          color: #555;
+          margin: 0;
+          line-height: 1.5;
+        }
+        details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        details h3 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #007acc;
+            text-transform: capitalize;
+        }
+
+        /* Contact Information Styles */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000000;
+            color: #e0e0e0;
+            font-size: 0.8rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Abdeljalil Ounaceur</h1>
+        <p>Master's Student in Data Science @ Ibn Zohr University | General Secretary of the IT club</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#volunteering">Volunteering</a>
+    </nav>
+    
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Abdeljalil, a passionate Master's student in Data Science from Ibn Zohr University, Agadir. I specialize in machine learning, data engineering, and statistical modeling. As the general  secretary and Internal Communications Coordinator for my IT Club, I actively organize workshops, training, and events to inspire curiosity and technical growth among members.</p>
+        
+        <h3>Contact Information</h3>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="icon">📧</span><b>Email: </b>
+                <a href="mailto:ounaceur.abdeljalil@gmail.com">ounaceur.abdeljalil@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📞</span><b>Phone: </b>
+                <a href="tel:+212701219103">+212 701-219103</a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🔗</span><b>Linkdein: </b>
+                <a href="https://linkedin.com/in/abdeljalil-ounaceur-33a657244" target="_blank">abdeljalil-ounaceur</a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">🐙</span><b>Github: </b>
+                <a href="https://github.com/Abdeljalil-Ounaceur" target="_blank">Abdeljalil-Ounaceur</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+        <details open>
+            <summary>Real-Time Surveillance System with Facial Recognition</summary>
+            <p>
+                Developed a facial recognition system for real-time surveillance using <strong>VGG-Face</strong> and deep learning. Designed a scalable data pipeline with <strong>Apache Spark</strong> for high-throughput data processing and <strong>Kafka</strong> for real-time data streaming. Leveraged <strong>Power BI</strong> to create interactive dashboards for visualizing insights and tracking identified individuals. The system includes continuous monitoring and automated alert mechanisms, enhancing security measures.
+            </p>
+        </details>
+        <details open>
+            <summary>Photovoltaic Solar Energy Prediction Model</summary>
+            <p>
+                Built a predictive model to forecast solar energy production using <strong>LSTM</strong> and <strong>Transformer models</strong>, solving complex time-series prediction challenges. Conducted data preprocessing, feature engineering, and performance evaluation using metrics like <strong>RMSE</strong>. Utilized <strong>TensorFlow</strong> and <strong>Scikit-Learn</strong> for model training, optimization, and fine-tuning, achieving high predictive accuracy for renewable energy production.
+            </p>
+        </details>
+        <details open>
+            <summary>Vacation Club Management System</summary>
+            <p>
+                Designed and implemented a management system for vacation club operations using <strong>C++</strong> and <strong>MFC</strong>. The system integrates database capabilities to handle large volumes of structured data related to members, activities, and locations. Implemented robust error handling and data validation techniques to ensure reliability and scalability.
+            </p>
+        </details>
+        <details open>
+            <summary>Travel Reservation Platform</summary>
+            <p>
+                Created a travel booking platform using <strong>Django</strong>, incorporating user roles and permissions for secure and efficient access. Integrated <strong>SQL databases</strong> to manage customer reservations and inventory tracking. Developed analytics dashboards to provide insights into customer preferences and streamline operational processes.
+            </p>
+        </details>
+        <details open>
+            <summary>Online Testing Platform</summary>
+            <p>
+                Built an online testing platform with <strong>Laravel</strong> and <strong>MySQL</strong>, including automated grading and result tracking features. Ensured reliability through comprehensive error handling and implemented secure data storage mechanisms. The platform delivers a seamless experience for both students and administrators, with insightful performance analytics.
+            </p>
+        </details>
+    </section>
+  
+    <section class="section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, SQL, C++</li>
+            <li><strong>Data Engineering Tools:</strong> Apache Spark, Kafka, Hadoop</li>
+            <li><strong>Machine Learning Frameworks:</strong> TensorFlow, PyTorch, Scikit-Learn</li>
+            <li><strong>Specialized Techniques:</strong> Deep Learning, NLP, Time Series Analysis</li>
+            <li><strong>Web Development:</strong> Django, Laravel, MySQL</li>
+        </ul>
+    </section>
+
+    <section class="section" id="volunteering">
+        <h2>Volunteering</h2>
+        <details open>
+            <summary>IT Club, Faculty of Science in Agadir</summary>
+            <p>
+                As the <strong>Internal Communications Coordinator</strong> and Training Support for the IT Club, I play a vital role in managing member communications, drafting emails, and creating detailed reports on club activities. I organize and deliver workshops on foundational and advanced IT topics such as <strong>Git</strong>, <strong>GitHub</strong>, and <strong>Python</strong>. My contributions focus on fostering a collaborative learning environment, empowering first-year university students to develop IT skills, and promoting creative problem-solving through technology.
+            </p>
+        </details>
+    </section>
+  
+
+    <footer>
+        <p>&copy; 2024 Abdeljalil. All rights reserved.</p>
+    </footer>
+</body>
+</html>
